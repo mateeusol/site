@@ -1,0 +1,289 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+}
+
+/* Header / Navbar */
+header {
+    position: fixed;         /* fixa no topo da tela */
+    top: 0;
+    left: 0;
+    width: 100%;             /* ocupa toda a largura */
+    background-color: rgba(0, 0, 0, 0.5); /* fundo semi-transparente */
+    backdrop-filter: blur(5px); /* efeito vidro fosco */
+    z-index: 1000;           /* acima do restante da página */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center; /* centraliza o menu */
+    align-items: center;     /* centraliza verticalmente */
+}
+
+/* Menu */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #ff0080;
+}
+
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    gap: 2rem;
+}
+
+.nav-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #ff0080;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-container {
+    background: rgba(20, 20, 20, 0.7); /* bloco transparente */
+    padding: 3rem 2rem;
+    border-radius: 2rem; /* arredondado */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+}
+
+/* Foto de perfil */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* redonda */
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #ff0080;
+}
+
+/* Texto */
+.hero-container h1 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+.description {
+    color: #cccccc;
+    font-size: 1.1rem;
+}
+
+.country {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: #ffffff;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff0080;
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    position: fixed;          
+    bottom: 0;                
+    left: 0;
+    width: 100%;              
+    background-color: rgba(0, 0, 0, 0.5); /* fundo semi-transparente */
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    backdrop-filter: blur(5px); /* efeito de desfoque do que estiver atrás */
+    z-index: 1000;            
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-container {
+        width: 90%;
+        padding: 2rem;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('img/fundo-site.avif'); /* imagem que você salvou */
+    background-size: cover;          /* cobre toda a tela */
+    background-position: center;     /* centraliza a imagem */
+    background-repeat: no-repeat;    /* não repete a imagem */
+    background-attachment: fixed;    /* mantém fixa ao rolar a página */
+    color: #ffffff;
+}
+/* Fundo da seção About */
+.about-section {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(30,30,30,0.8));
+}
+
+/* Container centralizado */
+.about-container {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+/* Profile card */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.8);
+    object-fit: cover;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+}
+
+/* Cards padrão */
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s, transform 0.6s;
+    opacity: 0; /* inicial invisível */
+    transform: translateY(30px); /* inicial deslocado */
+}
+
+/* Hover dos cards */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.8);
+}
+
+/* Fade-in animation */
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Títulos dos cards */
+.card h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card.visible h2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Skills e experiência */
+.skills-list,
+.experience-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+}
+
+.skills-list li,
+.experience-list li {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Links */
+.about-container a {
+    color: #1db954;
+    text-decoration: none;
+}
+
+.about-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 0 1rem;
+    }
+    .card {
+        padding: 1.5rem;
+    }
+    .card h2 {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+
+

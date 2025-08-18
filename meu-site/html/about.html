@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mateuso - Currículo</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Posts</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html" class="active">Currículo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+
+            <!-- Profile -->
+            <div class="profile-card">
+                <img src="../img/perfil.jpg" alt="Foto de Perfil" class="profile-pic">
+                <h1>Mateuso</h1>
+                <p class="description">22 | Pentest Enthusiast - Red Team</p>
+                <p class="country">Brasil</p>
+            </div>
+
+            <!-- Academic Background -->
+            <div class="card">
+                <h2><i class="fas fa-graduation-cap"></i> Academic Background</h2>
+                <ul class="experience-list">
+                    <li><i class="fas fa-check-circle"></i> Bacharelado em Sistema de informação</li>
+                    <li><i class="fas fa-check-circle"></i> Cursos de Cibersegurança & Red Team - TryHackMe / RNP</li>
+                </ul>
+            </div>
+
+            <!-- Sobre Mim -->
+            <div class="card">
+                <h2><i class="fas fa-user"></i> Sobre Mim</h2>
+                <p>Sou Mateuso, entusiasta de Pentest e Red Team. Atualmente estou estudando em segurança da informação, focando em análise e exploração de aplicações web.</p>
+            </div>
+
+            <!-- Skills -->
+            <div class="card">
+                <h2><i class="fas fa-tools"></i> Skills</h2>
+                <ul class="skills-list">
+                    <li><i class="fas fa-check-circle"></i> Red Team / Pentest</li>
+                    <li><i class="fas fa-check-circle"></i> Segurança em aplicações web</li>
+                    <li><i class="fas fa-check-circle"></i> Python / JavaScript</li>
+                    <li><i class="fas fa-check-circle"></i> Linux & Network Security</li>
+                    <li><i class="fas fa-check-circle"></i> CTF / Desafios de segurança</li>
+                </ul>
+            </div>
+
+            <!-- Experiência -->
+            <div class="card">
+                <h2><i class="fas fa-briefcase"></i> Experiência</h2>
+                <ul class="experience-list">
+                    <li><i class="fas fa-check-circle"></i> Em busca</li>
+                </ul>
+            </div>
+
+            <!-- Linguagens -->
+            <div class="card">
+                <h2><i class="fas fa-code"></i> Linguagens</h2>
+                <ul class="skills-list">
+                    <li><i class="fas fa-check-circle"></i> Python</li>
+                    <li><i class="fas fa-check-circle"></i> JavaScript</li>
+                    <li><i class="fas fa-check-circle"></i></li>
+                    <li><i class="fas fa-check-circle"></i></li>
+                </ul>
+            </div>
+
+            <!-- Certificações -->
+            <div class="card">
+                <h2><i class="fas fa-certificate"></i> Certificações</h2>
+                <ul class="experience-list">
+                    <li><i class="fas fa-check-circle"></i>Pre Security - TryHackMe</li>
+                    <li><i class="fas fa-check-circle"></i></li>
+                    <li><i class="fas fa-check-circle"></i></li>
+                </ul>
+            </div>
+
+            <!-- Eventos -->
+            <div class="card">
+                <h2><i class="fas fa-calendar-alt"></i> Eventos</h2>
+                <ul class="experience-list">
+                    <li><i class="fas fa-check-circle"></i> Capture The Flag (CTF) Competitions</li>
+                    <li><i class="fas fa-check-circle"></i></li>
+                    <li><i class="fas fa-check-circle"></i></li>
+                </ul>
+            </div>
+
+            <!-- Contato -->
+            <div class="card">
+                <h2><i class="fas fa-envelope"></i> Contato</h2>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:mateusguimaraes2122@gmail.com">mateusguimaraes2122@gmail.com</a></p>
+                <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/mateusoliveiraguimaraes" target="_blank">linkedin.com/in/mateusoliveiraguimaraes</a></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Mateuso. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JS para animação fade-in dos cards -->
+    <script>
+        const cards = document.querySelectorAll('.card');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        cards.forEach(card => observer.observe(card));
+    </script>
+</body>
+</html>
