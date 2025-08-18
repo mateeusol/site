@@ -158,7 +158,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-image: url('img/fundo-site.avif'); /* imagem que você salvou */
+    background-image: url('../img/fundo-site.avif'); /* corrige o caminho */
     background-size: cover;          /* cobre toda a tela */
     background-position: center;     /* centraliza a imagem */
     background-repeat: no-repeat;    /* não repete a imagem */
