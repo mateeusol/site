@@ -282,6 +282,13 @@ body {
         font-size: 1.3rem;
     }
 }
+button {
+  transition: transform 0.2s ease-in-out;
+}
+button:hover {
+  transform: scale(1.05);
+}
+
 
 
 
