@@ -288,6 +288,13 @@ button {
 button:hover {
   transform: scale(1.05);
 }
+.social-links img.tryhackme-logo {
+    height: 32px;
+    object-fit: contain;
+    margin-left: 0; /* remove o espaço extra */
+    vertical-align: middle;
+}
+
 
 
 
